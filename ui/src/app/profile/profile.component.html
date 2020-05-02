@@ -1,0 +1,53 @@
+<h2 style="margin-top: 50px; text-align: center;">
+  Profile Page
+</h2>
+
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroup-sizing-default"
+            style="background-color: #ffffff; width: 100px">Username</span>
+        </div>
+        <input type="text" value="{{ username }}" disabled=true class="form-control" aria-label="Default"
+          aria-describedby="inputGroup-sizing-default">
+      </div>
+
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroup-sizing-default"
+            style="background-color: #ffffff;width: 100px">Address</span>
+        </div>
+        <input type=" text" value="{{ profile.address }}" disabled=true class="form-control" aria-label="Default"
+          aria-describedby="inputGroup-sizing-default">
+      </div>
+
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroup-sizing-default"
+            style="background-color: #ffffff;width: 100px">Phone</span>
+        </div>
+        <input type=" text" value="{{ profile.phone }}" disabled=true class="form-control" aria-label="Default"
+          aria-describedby="inputGroup-sizing-default">
+      </div>
+
+      <div style="text-align: center;">
+        <button class="btn btn-primary button" (click)="onCreate()">
+          Create
+        </button>
+        <button class="btn btn-primary button" (click)="onEdit()">
+          Edit
+        </button>
+        <button class="btn btn-primary button" (click)="onDelete()">
+          Delete
+        </button>
+      </div>
+    </div>
+  </div>
+  <div>
+    <button class="btn btn-primary button" (click)="onLogout()">
+      Logout
+    </button>
+  </div>
+</div>
